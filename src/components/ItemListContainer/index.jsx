@@ -3,7 +3,9 @@ import "./style.css"
 export default function ItenListContainer() {
     return (
         <div>
-            <p>contudo</p>
+            <h1 className="text-green-500">
+                Conteúdo
+            </h1>
         </div>
     );
 }
