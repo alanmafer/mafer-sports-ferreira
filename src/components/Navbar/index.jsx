@@ -1,25 +1,39 @@
-import "./style.css"
+import { useState } from 'react'
 import logo from "../../assets/Mafer.png";
 import FeatherIcon from 'feather-icons-react';
 import Cartwidget from "../Cartwidget";
 
 export default function Navbar () {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return (
-        <nav class="nav-bar">
-            <div class="logo">
-                <img src={logo} alt="Mafer Sports"/>
+        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div className="flex lg:flex-1">
+                <a href="#" className="mt-0 mx-0">
+                    <span className="sr-only">Mafer Sports</span>
+                    <img className="h-20 w-auto" src={logo} alt="Mafer Sports" />
+                </a>
             </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Futebol</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">NBA</a></li>
-                </ul>
+            <div className="flex lg:hidden">
+                <button
+                    type="button"
+                    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    onClick={() => setMobileMenuOpen(true)}
+                >
+                    <span className="sr-only">Open main menu</span>
+                    <FeatherIcon className="h-6 w-6" aria-hidden="true" icon="menu" />
+                </button>
             </div>
-            <div class="login-button">
-                <Cartwidget />
-                <button><a href="#">Login / Cadastre-se</a><FeatherIcon icon="user"/></button>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <div class="relative">
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 mx-4">HOME</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 mx-4">FUTEBOL</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 mx-4">NBA</a>
+                </div>
+            </div>            
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">              
+                <button className='bg-orange-700 text-white font-semibold py-2 px-4 rounded mx-2'>Login / Registre-se</button>
             </div>
-        </nav>
+            <Cartwidget />
+        </nav>        
     )
 }
