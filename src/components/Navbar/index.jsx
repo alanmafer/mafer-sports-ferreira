@@ -10,7 +10,7 @@ export default function Navbar () {
             <div className="flex lg:flex-1">
                 <a href="#" className="mt-0 mx-0">
                     <span className="sr-only">Mafer Sports</span>
-                    <img className="h-20 w-auto" src={logo} alt="Mafer Sports" />
+                    <img className="h-14 w-auto" src={logo} alt="Mafer Sports" />
                 </a>
             </div>
             <div className="flex lg:hidden">
