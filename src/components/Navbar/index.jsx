@@ -23,14 +23,14 @@ export default function Navbar () {
                     <FeatherIcon className="h-6 w-6" aria-hidden="true" icon="menu" />
                 </button>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-                <div class="relative">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 mx-4">HOME</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 mx-4">FUTEBOL</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 mx-4">NBA</a>
+            <div className="hidden lg:flex lg:gap-x-12">
+                <div className="relative">
+                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900 mx-4">HOME</a>
+                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900 mx-4">FUTEBOL</a>
+                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900 mx-4">NBA</a>
                 </div>
             </div>            
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">              
+            <div className="hidden lg:flex lg:flex-1 lg:justify-end">              
                 <button className='bg-orange-700 text-white font-semibold py-2 px-4 rounded mx-2'>Login / Registre-se</button>
             </div>
             <Cartwidget />

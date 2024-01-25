@@ -1,9 +1,16 @@
+import { useState } from "react";
+import ItemCount from "../ItemCount";
+
 export default function ItenListContainer() {
+    const [count, setCount] = useState(0)
+
     return (
         <div>
-            <h1 className="">
-                Conteúdo
-            </h1>
+            <ItemCount 
+                stock={5}
+                count={count}
+                setCount={setCount}
+            />
         </div>
     );
 }
