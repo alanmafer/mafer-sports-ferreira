@@ -1,9 +1,12 @@
-import ItenList from "../ItemList";
+import ItemList from "../ItemList";
+import produtos from "../../api";
 
 export default function ItenListContainer() {
     return (
         <div>
-            <ItenList />
+            <ItemList
+                items={produtos}
+            />
         </div>
     );
 }
