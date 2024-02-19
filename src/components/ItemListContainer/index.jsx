@@ -4,9 +4,7 @@ import produtos from "../../api";
 export default function ItenListContainer() {
     return (
         <div>
-            <ItemList
-                items={produtos}
-            />
+            <ItemList items={produtos}/>
         </div>
     );
 }

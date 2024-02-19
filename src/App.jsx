@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import Header from './components/Header';
-import ItenListContainer from './components/ItemListContainer';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router';
+import CartProvider from './context/CartContext';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <Header /> 
-      <ItenListContainer/>
-    </div>
+    <CartProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </CartProvider>
   )
 }
 
